@@ -27,7 +27,7 @@ body {
     border-bottom: 1px solid gray;
 }
 
-.card-title {
+.card-body {
     font-weight: bold;
     color: hsl(0, 0%, 10%);
     margin-bottom: 5px;

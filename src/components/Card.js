@@ -1,17 +1,15 @@
 import Card from 'react-bootstrap/Card';
 
-const CardComponent = ({simsonChar}) => {
+const CardComponent = ({ Title, CharacterImage }) => {
     return (
-        <div>
-            <Card className='card'>
-                <Card.Img variant="top" src={simsonChar} className='card-img'/>
-                <Card.Body className='card-title'>
-                    <Card.Title >Homer Simpson</Card.Title>
-                </Card.Body>
-            </Card>
-        </div>
-    )
-}
-
+        <Card className='card'>
+            {console.log('card component updated')}
+            <Card.Img variant='top' src={CharacterImage} className='card-img' />
+            <Card.Body className='card-body'>
+                <Card.Title>{Title}</Card.Title>
+            </Card.Body>
+        </Card>
+    );
+};
 
 export default CardComponent;
