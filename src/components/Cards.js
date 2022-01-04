@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../index.css';
 import CardComponent from './Card.js';
 import Homer from '../images/homer.jpg';
 import Bart from '../images/Bart.png';
@@ -7,7 +6,7 @@ import Merge from '../images/merge.jpg';
 import MrBurns from '../images/MrBurns.png';
 
 const Cards = () => {
-    const [cards] = useState([
+    const [cards, setCards] = useState([
         { id: 1, title: 'Homer', imgUrl: Homer, clicked: false },
         { id: 2, title: 'Bart', imgUrl: Bart, clicked: false },
         { id: 3, title: 'Merge', imgUrl: Merge, clicked: false },
@@ -23,9 +22,9 @@ const Cards = () => {
         return newCards;
     };
 
+    // onclick  update state to shuffle cards
     const onClick = () => {
-        // ShuffledCards(cards)
-        console.log('Card clicked');
+        setCards([...cards]);
     };
 
     return (
