@@ -2,7 +2,7 @@ import CardComponent from './Card.js';
 
 const Cards = ({ cards, onClick }) => {
     const ShuffledCards = (cards) => {
-        const newCards = cards.slice();
+        const newCards = cards.slice(0);
         for (let i = newCards.length - 1; i > 0; i--) {
             const random = Math.floor(Math.random() * (i + 1));
             [newCards[i], newCards[random]] = [newCards[random], newCards[i]];
@@ -15,6 +15,7 @@ const Cards = ({ cards, onClick }) => {
             {ShuffledCards(cards).map((card) => (
                 <CardComponent
                     key={card.id}
+                    cardId={card.id}
                     Title={card.title}
                     CharacterImage={card.imgUrl}
                     onClick={onClick}
