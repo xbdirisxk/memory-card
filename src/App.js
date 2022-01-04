@@ -14,22 +14,51 @@ const App = () => {
         { id: 4, title: 'Mr. Burns', imgUrl: MrBurns, clicked: false },
     ]);
 
-    // const [scores, setScores] = useState({
-    //     currentScore: 0,
-    //     bestScore: 0,
-    // });
+    const [scores, setScores] = useState({
+        current: 0,
+        best: 3,
+    });
 
+    // for now restart when all card clicked
     const onClick = (id) => {
-        setCards(
-            cards.map((card) =>
-                card.id === id ? { ...card, clicked: true } : card
-            )
-        );
+        const allCardsClicked = cards.some((card) => card.clicked === false);
+        if (allCardsClicked) {
+            setCards(
+                cards.map((card) =>
+                    card.id === id ? { ...card, clicked: true } : card
+                )
+            );
+            incrementScore();
+        } else {
+            restartGame();
+            console.log('Game Over');
+        }
     };
+
+    const incrementScore = () => {
+        console.log(scores.current);
+        setScores({
+            current: ++scores.current,
+            best: scores.best < scores.current ? scores.current : scores.best,
+        });
+    };
+
+    const restartGame = () => {
+        let checkState = cards.map((card) => {
+            let newCards = {
+                ...card,
+                clicked: false,
+            };
+            return newCards;
+        });
+        setCards(checkState);
+    };
+
+    //setScores({ current: 0, best: scores.best });
     return (
         <div>
             <h1>Simsons Memory Game</h1>
-            <Score />
+            <Score scores={scores} />
             <Cards cards={cards} onClick={onClick} />
         </div>
     );
