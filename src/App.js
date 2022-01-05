@@ -16,13 +16,15 @@ const App = () => {
 
     const [scores, setScores] = useState({
         current: 0,
-        best: 3,
+        best: 0,
     });
 
     // for now restart when all card clicked
     const onClick = (id) => {
-        const allCardsClicked = cards.some((card) => card.clicked === false);
-        if (allCardsClicked) {
+        const cardIsClicked = cards
+            .map((card) => (card.id === id && card.clicked ? true : false))
+            .some((card) => card === true);
+        if (!cardIsClicked) {
             setCards(
                 cards.map((card) =>
                     card.id === id ? { ...card, clicked: true } : card
@@ -30,31 +32,26 @@ const App = () => {
             );
             incrementScore();
         } else {
-            restartGame();
-            console.log('Game Over');
+            restartCards();
         }
     };
 
     const incrementScore = () => {
-        console.log(scores.current);
         setScores({
             current: ++scores.current,
             best: scores.best < scores.current ? scores.current : scores.best,
         });
     };
 
-    const restartGame = () => {
-        let checkState = cards.map((card) => {
-            let newCards = {
-                ...card,
-                clicked: false,
-            };
-            return newCards;
+    const restartCards = () => {
+        const newCards = cards.map((card) => {
+            const cards = { ...card, clicked: false };
+            return cards;
         });
-        setCards(checkState);
+        setCards(newCards);
+        setScores({ current: 0, best: scores.best }); // restart current score
     };
 
-    //setScores({ current: 0, best: scores.best });
     return (
         <div>
             <h1>Simsons Memory Game</h1>

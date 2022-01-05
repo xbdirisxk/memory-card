@@ -1,12 +1,12 @@
 import '../index.css';
 
-const Score = () => {
+const Score = ({ scores }) => {
     return (
         <div>
             <h2 style={{ textDecoration: 'underline' }}>board score</h2>
             <p style={{ fontWeight: 'bold' }}>
-                <span>current-score: 2</span> <br />
-                <span>best-score: 3</span>
+                <span>current-score: {scores.current}</span> <br />
+                <span>best-score: {scores.best}</span>
             </p>
         </div>
     );
