@@ -5,6 +5,15 @@ import Homer from './images/homer.jpg';
 import Bart from './images/Bart.png';
 import Merge from './images/merge.jpg';
 import MrBurns from './images/MrBurns.png';
+import Lisa from './images/Lisa.png';
+import MoeSzyslak from './images/Moe_Szyslak.png';
+import NedFlanders from './images/Ned_Flanders.png';
+import WaylonSmithers from './images/Waylon_Smithers.png';
+
+import ApuNahasapeemapetilon from './images/Apu_Nahasapeemapetilon.png';
+import SideShowBob from './images/C-bob.png';
+import EdnaKrabappel from './images/Edna_Krabappel.png';
+import Krustytheclown from './images/Krustytheclown.png';
 
 const App = () => {
     const [cards, setCards] = useState([
@@ -12,6 +21,37 @@ const App = () => {
         { id: 2, title: 'Bart', imgUrl: Bart, clicked: false },
         { id: 3, title: 'Merge', imgUrl: Merge, clicked: false },
         { id: 4, title: 'Mr. Burns', imgUrl: MrBurns, clicked: false },
+
+        { id: 5, title: 'Lisa', imgUrl: Lisa, clicked: false },
+        { id: 6, title: 'Moe Szyslak', imgUrl: MoeSzyslak, clicked: false },
+        { id: 7, title: 'Ned Flanders', imgUrl: NedFlanders, clicked: false },
+
+        {
+            id: 8,
+            title: 'Apu Nahasapeemapetilon',
+            imgUrl: ApuNahasapeemapetilon,
+            clicked: false,
+        },
+        { id: 9, title: 'SideShow Bob', imgUrl: SideShowBob, clicked: false },
+        {
+            id: 10,
+            title: 'Edna Krabappel',
+            imgUrl: EdnaKrabappel,
+            clicked: false,
+        },
+        {
+            id: 11,
+            title: 'Krustytheclown',
+            imgUrl: Krustytheclown,
+            clicked: false,
+        },
+
+        {
+            id: 12,
+            title: 'Waylon Smithers',
+            imgUrl: WaylonSmithers,
+            clicked: false,
+        },
     ]);
 
     const [scores, setScores] = useState({

@@ -6,6 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -23,7 +24,8 @@ body {
 .card-img {
     height: 270px;
     width: 210px;
-    margin: 5px ;
+    object-fit: contain;
+    margin: 5px;
     border-bottom: 1px solid gray;
 }
 
