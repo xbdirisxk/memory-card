@@ -1,11 +1,11 @@
 import Card from 'react-bootstrap/Card';
 
-const CardComponent = ({ cardId, Title, CharacterImage, onClick }) => {
+const CardComponent = ({ CardId, Name, CharacterImage, onClick }) => {
     return (
-        <Card className='card' onClick={() => onClick(cardId)}>
+        <Card className='card' onClick={() => onClick(CardId)}>
             <Card.Img variant='top' src={CharacterImage} className='card-img' />
             <Card.Body className='card-body'>
-                <Card.Title>{Title}</Card.Title>
+                <Card.Title>{Name}</Card.Title>
             </Card.Body>
         </Card>
     );

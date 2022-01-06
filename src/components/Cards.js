@@ -15,8 +15,8 @@ const Cards = ({ cards, onClick }) => {
             {ShuffledCards(cards).map((card) => (
                 <CardComponent
                     key={card.id}
-                    cardId={card.id}
-                    Title={card.title}
+                    CardId={card.id}
+                    Name={card.name}
                     CharacterImage={card.imgUrl}
                     onClick={onClick}
                 />

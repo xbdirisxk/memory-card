@@ -1,15 +1,16 @@
 import Score from './components/Scores';
 import Cards from './components/Cards';
 import { useState } from 'react';
-import Homer from './images/homer.jpg';
+import './index.css';
+
+import Homer from './images/Homer.png';
 import Bart from './images/Bart.png';
-import Merge from './images/merge.jpg';
+import Marge from './images/Marge.png';
 import MrBurns from './images/MrBurns.png';
 import Lisa from './images/Lisa.png';
 import MoeSzyslak from './images/Moe_Szyslak.png';
 import NedFlanders from './images/Ned_Flanders.png';
 import WaylonSmithers from './images/Waylon_Smithers.png';
-
 import ApuNahasapeemapetilon from './images/Apu_Nahasapeemapetilon.png';
 import SideShowBob from './images/C-bob.png';
 import EdnaKrabappel from './images/Edna_Krabappel.png';
@@ -17,38 +18,35 @@ import Krustytheclown from './images/Krustytheclown.png';
 
 const App = () => {
     const [cards, setCards] = useState([
-        { id: 1, title: 'Homer', imgUrl: Homer, clicked: false },
-        { id: 2, title: 'Bart', imgUrl: Bart, clicked: false },
-        { id: 3, title: 'Merge', imgUrl: Merge, clicked: false },
-        { id: 4, title: 'Mr. Burns', imgUrl: MrBurns, clicked: false },
-
-        { id: 5, title: 'Lisa', imgUrl: Lisa, clicked: false },
-        { id: 6, title: 'Moe Szyslak', imgUrl: MoeSzyslak, clicked: false },
-        { id: 7, title: 'Ned Flanders', imgUrl: NedFlanders, clicked: false },
-
+        { id: 1, name: 'Homer Simpson', imgUrl: Homer, clicked: false },
+        { id: 2, name: 'Marge Simpson', imgUrl: Marge, clicked: false },
+        { id: 3, name: 'Bart Simpson', imgUrl: Bart, clicked: false },
+        { id: 4, name: 'Lisa Simpson', imgUrl: Lisa, clicked: false },
+        { id: 5, name: 'Mr. Burns', imgUrl: MrBurns, clicked: false },
+        { id: 6, name: 'Moe Szyslak', imgUrl: MoeSzyslak, clicked: false },
+        { id: 7, name: 'Ned Flanders', imgUrl: NedFlanders, clicked: false },
         {
             id: 8,
-            title: 'Apu Nahasapeemapetilon',
+            name: 'Apu Nahasapeemapetilon',
             imgUrl: ApuNahasapeemapetilon,
             clicked: false,
         },
-        { id: 9, title: 'SideShow Bob', imgUrl: SideShowBob, clicked: false },
+        { id: 9, name: 'SideShow Bob', imgUrl: SideShowBob, clicked: false },
         {
             id: 10,
-            title: 'Edna Krabappel',
+            name: 'Edna Krabappel',
             imgUrl: EdnaKrabappel,
             clicked: false,
         },
         {
             id: 11,
-            title: 'Krustytheclown',
+            name: 'Krustytheclown',
             imgUrl: Krustytheclown,
             clicked: false,
         },
-
         {
             id: 12,
-            title: 'Waylon Smithers',
+            name: 'Waylon Smithers',
             imgUrl: WaylonSmithers,
             clicked: false,
         },
@@ -59,7 +57,6 @@ const App = () => {
         best: 0,
     });
 
-    // for now restart when all card clicked
     const onClick = (id) => {
         const cardIsClicked = cards
             .map((card) => (card.id === id && card.clicked ? true : false))
@@ -94,8 +91,10 @@ const App = () => {
 
     return (
         <div>
-            <h1>Simsons Memory Game</h1>
-            <Score scores={scores} />
+            <div className='main'>
+                <h1 className='title'>Simpsons Memory Game</h1>
+                <Score scores={scores} />
+            </div>
             <Cards cards={cards} onClick={onClick} />
         </div>
     );
