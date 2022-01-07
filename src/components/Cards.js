@@ -1,4 +1,5 @@
 import CardComponent from './Card.js';
+import '../index.css';
 
 const Cards = ({ cards, onClick }) => {
     const ShuffledCards = (cards) => {

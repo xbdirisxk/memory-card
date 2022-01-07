@@ -27,7 +27,7 @@ const App = () => {
         { id: 7, name: 'Ned Flanders', imgUrl: NedFlanders, clicked: false },
         {
             id: 8,
-            name: 'Apu Nahasapeemapetilon',
+            name: 'Apu Nahas.',
             imgUrl: ApuNahasapeemapetilon,
             clicked: false,
         },
@@ -91,7 +91,7 @@ const App = () => {
 
     return (
         <div>
-            <div className='main'>
+            <div className='navbar'>
                 <h1 className='title'>Simpsons Memory Game</h1>
                 <Score scores={scores} />
             </div>
