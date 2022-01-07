@@ -95,6 +95,7 @@ const App = () => {
                 <h1 className='title'>Simpsons Memory Game</h1>
                 <Score scores={scores} />
             </div>
+            <p>click on every card once</p>
             <Cards cards={cards} onClick={onClick} />
         </div>
     );
