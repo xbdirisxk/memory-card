@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 
-const CardComponent = ({ CardId, Name, CharacterImage, onClick }) => {
+const CharacterCard = ({ CardId, Name, CharacterImage, onClick }) => {
     return (
         <Card className='card' onClick={() => onClick(CardId)}>
             <Card.Img variant='top' src={CharacterImage} className='card-img' />
@@ -11,4 +11,4 @@ const CardComponent = ({ CardId, Name, CharacterImage, onClick }) => {
     );
 };
 
-export default CardComponent;
+export default CharacterCard;

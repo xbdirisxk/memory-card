@@ -57,7 +57,7 @@ const App = () => {
         best: 0,
     });
 
-    const onClick = (id) => {
+    const handleClick = (id) => {
         const cardIsClicked = cards
             .map((card) => (card.id === id && card.clicked ? true : false))
             .some((card) => card === true);
@@ -95,8 +95,7 @@ const App = () => {
                 <h1 className='title'>Simpsons Memory Game</h1>
                 <Score scores={scores} />
             </div>
-            <p>click on every card once</p>
-            <Cards cards={cards} onClick={onClick} />
+            <Cards cards={cards} onClick={handleClick} />
         </div>
     );
 };

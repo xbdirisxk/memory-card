@@ -1,4 +1,4 @@
-import CardComponent from './Card.js';
+import CharacterCard from './CharacterCard.js';
 import '../index.css';
 
 const Cards = ({ cards, onClick }) => {
@@ -14,7 +14,7 @@ const Cards = ({ cards, onClick }) => {
     return (
         <div className='grid-cards'>
             {ShuffledCards(cards).map((card) => (
-                <CardComponent
+                <CharacterCard
                     key={card.id}
                     CardId={card.id}
                     Name={card.name}
