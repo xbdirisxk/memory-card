@@ -15,11 +15,11 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
-    padding: 0 15px;
-    margin-bottom: 25px;
+    padding: 0 10px;
+    margin-bottom: 5px;
 }
 
-.title {
+.game-logo {
     font-family: 'Permanent Marker', cursive;
     font-size: 35px;
     color: hsl(0, 59%, 41%);
@@ -39,7 +39,7 @@ body {
 
 .grid-cards {
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@ body {
 }
 
 .card {
-    background-color: hsl(0, 100%, 97%);
+    background-color: hsl(46, 100%, 94%);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     transition: 0.07s;
@@ -59,7 +59,7 @@ body {
 }
 
 .card-img {
-    height: 220px;
+    height: 210px;
     width: 170px;
     object-fit: contain;
     margin: 5px;
@@ -72,13 +72,23 @@ body {
     margin-bottom: 5px;
 }
 
-@media only screen and (max-width: 750px) {
+/* Responsive cards */
+
+@media (max-width: 750px) {
     .grid-cards {
-        display: inline-grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
     .card-img {
         height: 200px;
-        width: 150px;
+        width: 155px;
+    }
+}
+@media (max-width: 550px) {
+    .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-img {
+        height: 165px;
+        width: 130px;
     }
 }

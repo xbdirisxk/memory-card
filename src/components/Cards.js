@@ -1,7 +1,8 @@
+import React from 'react';
 import CharacterCard from './CharacterCard.js';
 import '../index.css';
 
-const Cards = ({ cards, onClick }) => {
+const Cards = ({ cards, handleClick }) => {
     const ShuffledCards = (cards) => {
         const newCards = [...cards];
         for (let i = newCards.length - 1; i > 0; i--) {
@@ -19,7 +20,7 @@ const Cards = ({ cards, onClick }) => {
                     CardId={card.id}
                     Name={card.name}
                     CharacterImage={card.imgUrl}
-                    onClick={onClick}
+                    handleClick={handleClick}
                 />
             ))}
         </div>
