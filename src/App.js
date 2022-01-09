@@ -9,16 +9,14 @@ const App = () => {
         best: 0,
     });
 
-    const incrementScore = () => {
+    const incrementScore = () =>
         setScores({
             current: ++scores.current,
             best: scores.best < scores.current ? scores.current : scores.best,
         });
-    };
 
-    const restartScore = () => {
-        setScores({ current: 0, best: scores.best });
-    };
+    const restartScore = () => setScores({ current: 0, best: scores.best });
+
     return (
         <div>
             <div className='navbar'>

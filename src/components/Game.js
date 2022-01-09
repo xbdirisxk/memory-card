@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Cards from './Cards';
-import Score from './ScoresBoard';
 import '../index.css';
 
 import Homer from '../images/Homer.png';
