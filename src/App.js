@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Game from './components/Game';
-import Score from './components/ScoresBoard';
-import './index.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
     const [scores, setScores] = useState({
@@ -18,13 +18,11 @@ const App = () => {
     const restartScore = () => setScores({ current: 0, best: scores.best });
 
     return (
-        <div>
-            <div className='navbar'>
-                <h1 className='game-logo'>Simpsons Memory Game</h1>
-                <Score scores={scores} />
-            </div>
+        <>
+            <Navbar scores={scores} />
             <Game incrementScore={incrementScore} restartScore={restartScore} />
-        </div>
+            <Footer />
+        </>
     );
 };
 

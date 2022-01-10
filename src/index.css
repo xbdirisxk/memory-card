@@ -91,4 +91,54 @@ body {
         height: 165px;
         width: 130px;
     }
+    .scores {
+        font-size: 12px;
+    }
+}
+
+/* footer */
+
+.footer {
+    background-color: hsl(34, 78%, 61%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.source {
+    background-color: hsl(34, 78%, 62%);
+}
+.source > i {
+    font-size: 30px;
+    margin-right: 5px;
+    transform: translate(250%, 0%);
+    transition: 0.5s;
+}
+
+.source:hover i {
+    transform: translate(0%, 0%);
+    cursor: default;
+}
+
+.source > .link {
+    color: hsl(34, 78%, 61%);
+    font-size: 21px;
+    transition: 1s;
+}
+
+.source:hover .link {
+    color: black;
+    text-decoration: underline;
+    cursor: default;
+}
+
+.how-to-play {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.how-to-play > a {
+    color: black;
 }
