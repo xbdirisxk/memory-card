@@ -7,12 +7,17 @@ const Footer = () => {
             <div className='empty'></div>
             <div class='source'>
                 <i class='fa fa-github'></i>
-                <a href='#github' className='link'>
+                <a
+                    href='https://github.com/xbdirisxk/memory-card'
+                    className='source-link'
+                >
                     Source Code
                 </a>
             </div>
             <div className='how-to-play'>
-                <a href='#help'>how to play</a>
+                <a href='https://github.com/xbdirisxk/memory-card/blob/main/README.md#how-to-play-this-game'>
+                    how to play
+                </a>
             </div>
         </div>
     );

@@ -99,19 +99,19 @@ body {
 /* footer */
 
 .footer {
-    background-color: hsl(34, 78%, 61%);
+    background-color: hsl(34, 78%, 81%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px;
+    padding: 2px 15px;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 25px;
 }
 .source {
-    background-color: hsl(34, 78%, 62%);
+    background-color: hsl(34, 78%, 82%);
+    padding: 1px 20px;
 }
 .source > i {
-    font-size: 30px;
     margin-right: 5px;
     transform: translate(250%, 0%);
     transition: 0.5s;
@@ -122,13 +122,13 @@ body {
     cursor: default;
 }
 
-.source > .link {
-    color: hsl(34, 78%, 61%);
-    font-size: 21px;
+.source > .source-link {
+    color: hsl(34, 78%, 81%);
+    font-size: 20px;
     transition: 1s;
 }
 
-.source:hover .link {
+.source:hover .source-link {
     color: black;
     text-decoration: underline;
     cursor: default;
