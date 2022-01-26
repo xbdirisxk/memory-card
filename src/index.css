@@ -106,6 +106,7 @@ body {
     padding: 2px 15px;
     margin-top: 10px;
     font-size: 25px;
+    font-family: monospace;
 }
 .source {
     background-color: hsl(34, 78%, 82%);
@@ -113,7 +114,7 @@ body {
 }
 .source > i {
     margin-right: 5px;
-    transform: translate(250%, 0%);
+    transform: translate(550%, 0%);
     transition: 0.5s;
 }
 
